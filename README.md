@@ -72,4 +72,3 @@ Everything (UI + Logic) is implemented inside a **single Java file**.
 - Clicks `C` to clear the display
 - If division by zero is attempted, it shows `"Error"`
 
-  ---
