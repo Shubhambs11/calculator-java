@@ -8,13 +8,24 @@ public class Calculator {
 
         System.out.println("=== Java Calculator ===");
 
+        // First number
         System.out.print("Enter first number: ");
+        if (!sc.hasNextDouble()) {
+            System.out.println("Invalid first number!");
+            return;
+        }
         double num1 = sc.nextDouble();
 
+        // Operator
         System.out.print("Enter operator (+, -, *, /): ");
         char operator = sc.next().charAt(0);
 
+        // Second number
         System.out.print("Enter second number: ");
+        if (!sc.hasNextDouble()) {
+            System.out.println("Invalid second number!");
+            return;
+        }
         double num2 = sc.nextDouble();
 
         double result;
@@ -36,7 +47,6 @@ public class Calculator {
             case '/':
                 if (num2 == 0) {
                     System.out.println("Error: Division by zero");
-                    sc.close();
                     return;
                 }
                 result = num1 / num2;
@@ -44,12 +54,10 @@ public class Calculator {
 
             default:
                 System.out.println("Invalid operator");
-                sc.close();
                 return;
         }
 
         System.out.println("Result: " + result);
-
         sc.close();
     }
 }
